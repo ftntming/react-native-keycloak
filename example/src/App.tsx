@@ -7,16 +7,16 @@ import {
 import Login from './Login';
 
 const keycloak = new RNKeycloak({
-  url: 'http://keycloak-server/auth',
-  realm: 'kc-realm',
-  clientId: 'web',
+  url: 'https://sso.fortivoice-cloud.net/auth',
+  realm: 'chat.vanaaa.ca',
+  clientId: 'barkoder-frontend',
 });
 
 export default function App() {
   return (
     <ReactNativeKeycloakProvider
       authClient={keycloak}
-      initOptions={{ redirectUri: 'myapp://Homepage' }}
+      initOptions={{ redirectUri: 'maslick://oauthresponse' }}
     >
       <Login />
     </ReactNativeKeycloakProvider>
